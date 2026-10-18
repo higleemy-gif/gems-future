@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Gems Future — global base styles.
+ * Light theme only. Mobile-first. WCAG AA contrast.
+ */
+
+@layer base {
+  html {
+    /* Smooth in-page anchor scrolling. */
+    scroll-behavior: smooth;
+    /* Respect iOS safe areas / consistent box sizing is handled by Tailwind preflight. */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    /* Poppins is the single UI typeface (via the `body` family -> Poppins). */
+    @apply bg-bg text-ink font-body antialiased;
+    /* Ensure the page always fills the viewport height. */
+    min-height: 100dvh;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Headings render in Poppins at a heavier weight (the `display` family also
+     maps to Poppins); everything else inherits Poppins from <body>. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display text-ink;
+    text-wrap: balance;
+  }
+
+  /* Visible, accessible focus ring on every interactive element. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-bg;
+  }
+
+  /* Respect users who prefer reduced motion. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/**
+ * Intro animation.
+ *
+ * Deliberately TRANSFORM-ONLY (no opacity fade): every element stays fully
+ * opaque and readable from the first paint. The animation only settles each
+ * element upward a few pixels, so the page looks complete the instant it loads
+ * and the motion is a subtle enhancement layered on top.
+ *
+ * Elements carry `.gf-rise` plus an optional `.gf-rise-N` stagger delay. With
+ * `animation-fill-mode: both`, a delayed element simply holds a few pixels
+ * lower (still fully readable) until its turn. Total run stays well under 2s.
+ */
+@layer utilities {
+  .gf-rise {
+    animation: gf-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .gf-rise-1 {
+    animation-delay: 0.06s;
+  }
+  .gf-rise-2 {
+    animation-delay: 0.14s;
+  }
+  .gf-rise-3 {
+    animation-delay: 0.22s;
+  }
+  .gf-rise-4 {
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes gf-rise {
+  from {
+    transform: translateY(14px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Users who opt out of motion get no movement at all. */
+@media (prefers-reduced-motion: reduce) {
+  .gf-rise,
+  .gf-rise-1,
+  .gf-rise-2,
+  .gf-rise-3,
+  .gf-rise-4 {
+    animation: none;
+    transform: none;
+  }
+}
