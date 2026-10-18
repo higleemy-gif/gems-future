@@ -35,9 +35,15 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# cloudflare / opennext build output
+/.open-next/
+/.wrangler/
+
 # local scratch / debug artifacts (not part of the app)
 /tc.log
 /checks.txt
 /dims.txt
 /snippet.txt
 /home.html
+/up.log
+/install.log
