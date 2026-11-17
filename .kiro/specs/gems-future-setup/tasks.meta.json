@@ -1,0 +1,59 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Generate the base Next.js 14 scaffold into the workspace root": [
+      {
+        "executionId": "f5bad3c9-70f8-4c43-9a6b-1d8f0c08b677",
+        "chatSessionId": "sess_b188b7c5-6a02-4f6a-bfaf-7e6b6f630fb0",
+        "timestamp": 1794400145557
+      },
+      {
+        "executionId": "f5bad3c9-70f8-4c43-9a6b-1d8f0c08b677",
+        "chatSessionId": "sess_b188b7c5-6a02-4f6a-bfaf-7e6b6f630fb0",
+        "timestamp": 1794400158214
+      }
+    ],
+    "1.2 Install Framer Motion": [
+      {
+        "executionId": "f5bad3c9-70f8-4c43-9a6b-1d8f0c08b677",
+        "chatSessionId": "sess_b188b7c5-6a02-4f6a-bfaf-7e6b6f630fb0",
+        "timestamp": 1794400145822
+      }
+    ],
+    "2.1 Customize `src/app/globals.css`": [
+      {
+        "executionId": "f5bad3c9-70f8-4c43-9a6b-1d8f0c08b677",
+        "chatSessionId": "sess_b188b7c5-6a02-4f6a-bfaf-7e6b6f630fb0",
+        "timestamp": 1794400146048
+      }
+    ],
+    "2.2 Customize `tailwind.config.ts`": [
+      {
+        "executionId": "f5bad3c9-70f8-4c43-9a6b-1d8f0c08b677",
+        "chatSessionId": "sess_b188b7c5-6a02-4f6a-bfaf-7e6b6f630fb0",
+        "timestamp": 1794400146151
+      }
+    ],
+    "3.1 Customize `src/app/layout.tsx`": [
+      {
+        "executionId": "f5bad3c9-70f8-4c43-9a6b-1d8f0c08b677",
+        "chatSessionId": "sess_b188b7c5-6a02-4f6a-bfaf-7e6b6f630fb0",
+        "timestamp": 1794400146225
+      }
+    ],
+    "3.2 Replace `src/app/page.tsx` with a minimal root route": [
+      {
+        "executionId": "f5bad3c9-70f8-4c43-9a6b-1d8f0c08b677",
+        "chatSessionId": "sess_b188b7c5-6a02-4f6a-bfaf-7e6b6f630fb0",
+        "timestamp": 1794400146300
+      }
+    ],
+    "4.1 Install, run, lint, and type-check verification": [
+      {
+        "executionId": "f5bad3c9-70f8-4c43-9a6b-1d8f0c08b677",
+        "chatSessionId": "sess_b188b7c5-6a02-4f6a-bfaf-7e6b6f630fb0",
+        "timestamp": 1794400146382
+      }
+    ]
+  }
+}
